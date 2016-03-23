@@ -13,8 +13,9 @@
 		1B8CAF081CA07BBA00BF115E /* SimpleView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAF061CA07BBA00BF115E /* SimpleView.xcdatamodeld */; };
 		1B8CAF0A1CA07BBA00BF115E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CAF091CA07BBA00BF115E /* Assets.xcassets */; };
 		1B8CAF0D1CA07BBA00BF115E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CAF0B1CA07BBA00BF115E /* LaunchScreen.storyboard */; };
-		1B8CAF181CA0814600BF115E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAF171CA0814600BF115E /* Task.swift */; };
-		1B8CAF1A1CA090D300BF115E /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAF191CA090D300BF115E /* TaskViewController.swift */; };
+		1B8CAF421CA1CE0000BF115E /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAF401CA1CE0000BF115E /* Tasks.xcdatamodeld */; };
+		1B8CAF451CA1CF3400BF115E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CAF441CA1CF3400BF115E /* DataController.swift */; };
+		1BF7A8861CA1FE72008FC0E7 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7A8851CA1FE72008FC0E7 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		1B8CAF091CA07BBA00BF115E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B8CAF0C1CA07BBA00BF115E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B8CAF0E1CA07BBA00BF115E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B8CAF171CA0814600BF115E /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		1B8CAF191CA090D300BF115E /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		1B8CAF411CA1CE0000BF115E /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
+		1B8CAF441CA1CF3400BF115E /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1BF7A8851CA1FE72008FC0E7 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				1B8CAEFF1CA07BBA00BF115E /* AppDelegate.swift */,
+				1B8CAF441CA1CF3400BF115E /* DataController.swift */,
+				1B8CAF401CA1CE0000BF115E /* Tasks.xcdatamodeld */,
 				1B8CAF161CA07C1200BF115E /* Controllers */,
 				1B8CAF141CA07BFC00BF115E /* Views */,
-				1B8CAF151CA07C0900BF115E /* Models */,
-				1B8CAF031CA07BBA00BF115E /* Main.storyboard */,
-				1B8CAF091CA07BBA00BF115E /* Assets.xcassets */,
-				1B8CAF0B1CA07BBA00BF115E /* LaunchScreen.storyboard */,
-				1B8CAF0E1CA07BBA00BF115E /* Info.plist */,
-				1B8CAF061CA07BBA00BF115E /* SimpleView.xcdatamodeld */,
+				1B8CAF431CA1CE9A00BF115E /* Supporting Files */,
 			);
 			path = SimpleView;
 			sourceTree = "<group>";
@@ -76,25 +75,29 @@
 		1B8CAF141CA07BFC00BF115E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1BF7A8851CA1FE72008FC0E7 /* TaskTableViewCell.swift */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		1B8CAF151CA07C0900BF115E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1B8CAF171CA0814600BF115E /* Task.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		1B8CAF161CA07C1200BF115E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1B8CAF011CA07BBA00BF115E /* TableViewController.swift */,
-				1B8CAF191CA090D300BF115E /* TaskViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1B8CAF431CA1CE9A00BF115E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B8CAF031CA07BBA00BF115E /* Main.storyboard */,
+				1B8CAF091CA07BBA00BF115E /* Assets.xcassets */,
+				1B8CAF0B1CA07BBA00BF115E /* LaunchScreen.storyboard */,
+				1B8CAF0E1CA07BBA00BF115E /* Info.plist */,
+				1B8CAF061CA07BBA00BF115E /* SimpleView.xcdatamodeld */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B8CAF181CA0814600BF115E /* Task.swift in Sources */,
+				1B8CAF451CA1CF3400BF115E /* DataController.swift in Sources */,
 				1B8CAF021CA07BBA00BF115E /* TableViewController.swift in Sources */,
-				1B8CAF1A1CA090D300BF115E /* TaskViewController.swift in Sources */,
+				1BF7A8861CA1FE72008FC0E7 /* TaskTableViewCell.swift in Sources */,
+				1B8CAF421CA1CE0000BF115E /* Tasks.xcdatamodeld in Sources */,
 				1B8CAF081CA07BBA00BF115E /* SimpleView.xcdatamodeld in Sources */,
 				1B8CAF001CA07BBA00BF115E /* AppDelegate.swift in Sources */,
 			);
@@ -321,6 +325,7 @@
 				1B8CAF131CA07BBA00BF115E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -332,6 +337,16 @@
 			);
 			currentVersion = 1B8CAF071CA07BBA00BF115E /* SimpleView.xcdatamodel */;
 			path = SimpleView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		1B8CAF401CA1CE0000BF115E /* Tasks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1B8CAF411CA1CE0000BF115E /* Tasks.xcdatamodel */,
+			);
+			currentVersion = 1B8CAF411CA1CE0000BF115E /* Tasks.xcdatamodel */;
+			path = Tasks.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
